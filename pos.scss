@@ -1,0 +1,240 @@
+// @nebular theming framework
+@import '~@nebular/theme/styles/theming';
+// @nebular out of the box themes
+@import '~@nebular/theme/styles/themes';
+
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~@nebular/theme/styles/global/breakpoints";
+// material themes
+@import './material/material-light';
+
+@include media-breakpoint-down(lg) {
+  .main-routing-layout nb-layout-column {
+    overflow-x: hidden;
+    padding-bottom: var(--mobile-footer-height) !important;
+  }
+}
+
+$nb-enable-css-custom-properties: true;
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 1.25rem,
+  layout-background-color: #f2f4f5,
+
+  menu-item-icon-margin: 0 0.5rem 0 0,
+
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.25rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+  card-divider-color: #DDE0E5,
+
+  select-min-width: 6rem,
+
+  slide-out-background: #f7f9fc,
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
+  sidebar-padding: -1.25rem,
+
+  mobile-footer-height: 50px
+), default, default);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 1.25rem,
+
+  menu-item-icon-margin: 0 0.5rem 0 0,
+
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+
+  select-min-width: 6rem,
+
+  slide-out-background: #252547,
+  slide-out-shadow-color: 2px 0 3px #29157a,
+  slide-out-shadow-color-rtl: -2px 0 3px #29157a,
+
+  sidebar-padding: -1.25rem,
+
+  mobile-footer-height: 50px
+), cosmic, cosmic);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 1.25rem,
+
+  menu-item-icon-margin: 0 0.5rem 0 0,
+
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+
+  select-min-width: 6rem,
+
+  slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
+  sidebar-padding: -1.25rem,
+
+  mobile-footer-height: 50px
+), corporate, corporate);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 1.25rem,
+
+  menu-item-icon-margin: 0 0.5rem 0 0,
+
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+
+  select-min-width: 6rem,
+
+  slide-out-background: linear-gradient(270deg, #222b45 0%, #151a30 100%),
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
+  sidebar-padding: -1.25rem,
+
+  mobile-footer-height: 50px
+), dark, dark);
+
+
+$nb-themes: nb-register-theme((
+  //color-primary-900: #6b0666,
+  
+  //custom variable for header
+  text-disabled-color-header: color-basic-600,
+  text-hint-color-header: #ffffff,
+  text-basic-color-header: #ffffff,
+  actions-icon-color-header: #f7b0ab,
+  alepo-container-color: #efd8ec,
+  alepo-header-basic-text-color: #ffffff,
+  // header changes
+  header-text-color: #ffffff,
+  header-shadow: #b86e6e,
+  header-background-color: #BF0000,
+  //footer changes 
+  footer-background-color: #9f2214,
+  footer-text-color: #ffffff,
+  footer-text-highlight-color: #be8a86,
+  //menu
+  menu-item-icon-color: #7e0303,
+  menu-submenu-text-color: #7e0303,
+  menu-item-icon-hover-color: #bd7878,
+  menu-item-active-text-color: #771009,
+  menu-item-icon-active-color: #5d0805,
+  menu-item-hover-text-color: #be8686,
+  // text color
+  text-basic-color: #5d0805,
+  text-hint-color: #da8585,
+  text-info-focus-color: #5d0805,
+  link-text-color: #5d0805,
+  link-text-focus-color: #a7110c,
+  link-text-hover-color:#be8686,
+  //button
+  button-filled-primary-background-color: #db2727,
+  button-filled-primary-active-border-color: #BF0000,
+  button-outline-primary-border-color: #BF0000,
+  button-outline-primary-text-color: #db2727,
+  color-primary-default: #BF0000,
+  card-border-color: #BF0000,
+  card-border-width: 1px,
+  //header title
+  header-title-color: #efd8ec,
+  header-title-font-size: large,
+), alepo, default);
+
+$nb-themes: nb-register-theme((
+  // layout
+  layout-background-color: #f2f4f5,
+
+  // font
+  font-main: 'Montserrat',
+  font-secondary: 'Montserrat',
+  font-family-primary: 'Montserrat',
+
+  // text
+  link-text-color: #4F55C9,
+  link-text-hover-color:#4F55C9,
+  link-text-focus-color: #4F55C9,
+  text-primary-hover-color: #4F55C9,
+  tabset-tab-active-text-color:#4F55C9,
+  tabset-tab-active-underline-color:#4F55C9,
+  icon-success-color: #00C02E,
+  text-primary-color: #212121,
+  text-basic-color: #212121,
+  header-title-font-size: 20px,
+  tabset-content-padding: 1rem 3px,
+  progress-bar-tiny-height: 4px,
+  progress-bar-border-radius: 2px,
+  progress-bar-info:#579EEF,
+  button-filled-medium-padding: 0.65rem 1.175rem, //5px 29px,
+  button-outline-medium-padding: 0.65rem 1.175rem,
+  button-medium-text-font-size : 1rem,
+  button-outline-background-color: #ffffff,
+  card-text-font-weight:400,
+  card-text-font-size:16px,
+  card-margin-bottom: 20px,
+  card-border-width:0px,
+  card-border-radius: 4px,
+  card-shadow: 0 0px 6px 0 #BEBEBE,
+  card-scrollbar-color: #4F55C9,
+  menu-item-padding:0.75rem 0.6rem,
+  menu-item-divider-width:0px,
+  button-outline-primary-text-color: #4F55C9,
+  color-primary-default: #4F55C9,
+  color-primary-default-light: #e84f3829,
+  color-primary-default-background-light:#e84f3805,
+  button-rectangle-border-radius: 2px,
+  checkbox-disabled-background-color : #7894afc9,
+  checkbox-disabled-text-color : #32465ac9,
+  radio-disabled-inner-circle-color : #7894afc9,
+  radio-disabled-text-color : #32465ac9,
+  header-shadow:0px 3px 6px #00000029,
+  card-header-background-default:#F2F7F7,
+  card-footer-background-default:#F2F7F7,
+  card-divider-color: #DDE0E5,
+  input-rectangle-border-radius: 4px,
+  input-text-font-family: 'Montserrat',
+  button-text-font-family: 'Montserrat',
+  radio-text-font-family: 'Montserrat',
+  select-text-font-family: 'Montserrat',
+  //Window size
+  tabset-tab-text-transform:'capitalize',
+  layout-window-mode-max-width: 1400px,
+  pin-input-width: 50px,
+  pin-input-height: 50px,
+  card-footer-padding: 0.6rem 1.25rem,
+  card-header-padding: 0.8rem 0.9rem,
+  //layout-small-padding: 2px 2px 0px,
+  layout-small-padding: 12px 15px 0px,
+  list-spacing: 7px,
+  sidebar-padding: -1.25rem,
+  mobile-footer-height: 50px,
+  input-disabled-text-color: #636973,
+  input-medium-placeholder-text-font-size : 0.75rem,
+  input-medium-placeholder-text-font-weight : 500,
+  input-small-placeholder-text-font-size : 0.75rem,
+  input-disabled-placeholder-text-font-size : 0.75rem
+), webapp, corporate);
